@@ -21,17 +21,17 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           <button className="menu-toggle" onClick={toggleSidebar}>
             <FontAwesomeIcon icon={faBars} />
           </button>
-          <Link to="/" className="logo">
-            <h1>
+          
+            <h1 className="logo">
               Gourmet<span>Burger</span>
             </h1>
-          </Link>
+          
         </div>
 
         <nav className="navbar-center">
           <ul className="nav-links">
             <li>
-              <Link to="/">Inicio</Link>
+              <Link to="/burger">Inicio</Link>
             </li>
             <li>
               <Link to="/menu">Menú</Link>
