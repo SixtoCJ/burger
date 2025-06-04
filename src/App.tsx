@@ -35,7 +35,7 @@ const App = () => {
           <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
           <main className="main-content">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/burger" element={<Home />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/promociones" element={<Promociones />} />
               <Route path="/sobre-nosotros" element={<SobreNosotros />} />
