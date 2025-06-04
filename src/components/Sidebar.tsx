@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <nav className="sidebar-nav">
             <ul>
               <li>
-                <Link to="/" onClick={toggleSidebar}>
+                <Link to="/burger" onClick={toggleSidebar}>
                   <FontAwesomeIcon icon={faHome} />
                   <span>Inicio</span>
                 </Link>
