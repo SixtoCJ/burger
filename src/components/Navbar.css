@@ -36,6 +36,7 @@
 
 .logo {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .logo h1 {
