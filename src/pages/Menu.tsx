@@ -198,14 +198,7 @@ const Menu: React.FC = () => {
               </ul>
             </div>
 
-            <div className="search-filter">
-              <input
-                type="text"
-                placeholder="Buscar en el menú..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
+          
           </div>
 
           <div className="menu-products">
