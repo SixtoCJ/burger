@@ -1,0 +1,366 @@
+.promociones-page {
+  padding-bottom: var(--spacing-xxl);
+}
+
+.promociones-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FbyJjgYJj9LxvkFAWzuRh4LV4Qbfn7.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: var(--spacing-xxl) 0;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.promociones-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='10' cy='10' r='1'/%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3Ccircle cx='50' cy='50' r='1'/%3E%3Ccircle cx='70' cy='70' r='1'/%3E%3Ccircle cx='90' cy='90' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+.promociones-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.promociones-subtitle {
+  font-size: var(--font-size-lg);
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.promociones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.promocion-card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.promocion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.promocion-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: var(--color-accent);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(255, 69, 0, 0.3);
+}
+
+.promocion-image {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.promocion-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.promocion-card:hover .promocion-image::after {
+  opacity: 1;
+}
+
+.promocion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.promocion-card:hover .promocion-image img {
+  transform: scale(1.08);
+}
+
+.promocion-content {
+  padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.promocion-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+  transition: color var(--transition-normal);
+}
+
+.promocion-card:hover .promocion-title {
+  color: var(--color-accent);
+}
+
+.promocion-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.promocion-details {
+  margin-bottom: var(--spacing-md);
+}
+
+.promocion-price {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.price-current {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-accent);
+  position: relative;
+}
+
+.price-current::before {
+  content: "$";
+  font-size: 0.7em;
+  position: relative;
+  top: -5px;
+  left: -2px;
+}
+
+.price-original {
+  font-size: var(--font-size-md);
+  color: var(--color-text-light);
+  text-decoration: line-through;
+  position: relative;
+}
+
+.price-original::before {
+  content: "$";
+  font-size: 0.7em;
+  position: relative;
+  top: -3px;
+  left: -2px;
+}
+
+.promocion-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  background-color: var(--color-background-alt);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-top: var(--spacing-sm);
+}
+
+.promocion-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.promocion-meta-item svg {
+  color: var(--color-primary);
+}
+
+.promocion-btn {
+  margin-top: var(--spacing-md);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 12px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.promocion-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: height var(--transition-normal);
+  z-index: -1;
+}
+
+.promocion-btn:hover::after {
+  height: 100%;
+}
+
+.promocion-btn svg {
+  transition: transform var(--transition-normal);
+}
+
+.promocion-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Promociones Info Section */
+.promociones-info-section {
+  background-color: var(--color-background-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.promociones-info-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.promociones-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.promociones-info-content {
+  padding: var(--spacing-lg);
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.promociones-info-content h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.promociones-info-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.promociones-info-list {
+  margin: var(--spacing-lg) 0;
+}
+
+.promociones-info-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  background-color: var(--color-background-alt);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-normal);
+}
+
+.promociones-info-list li:hover {
+  transform: translateX(5px);
+  background-color: rgba(139, 0, 0, 0.05);
+}
+
+.list-icon {
+  color: var(--color-primary);
+  margin-right: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.promociones-info-image {
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.promociones-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.promociones-info:hover .promociones-info-image img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .promociones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promociones-info {
+    grid-template-columns: 1fr;
+  }
+
+  .promociones-info-image {
+    order: -1;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promociones-header {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .promociones-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .promociones-subtitle {
+    font-size: var(--font-size-md);
+  }
+}
